@@ -1,0 +1,18 @@
+[package]
+name = "ffi-c-calling-rust"
+version = "0.1.0"
+authors = ["Josh Mcguigan"]
+edition = "2018"
+
+[dependencies.libc]
+version = "0.2"
+default-features = false
+
+[lib]
+crate-type =  ["staticlib"]
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
